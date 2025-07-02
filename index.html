@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Physical Superstar Flip Card</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fef6e4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 400px;
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+    }
+    .flip-card-front {
+      background: linear-gradient(to top right, #ffd6ec, #ffe9ae);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .flip-card-front h2 {
+      margin: 15px 0;
+      color: #ff4081;
+      font-size: 24px;
+    }
+    .flip-card-front img {
+      width: 100px;
+      height: 100px;
+    }
+    .flip-card-back {
+      background: #fff3cd;
+      transform: rotateY(180deg);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .flip-card-back iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 10px;
+    }
+    .flip-card-back p {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <!-- Front of the card -->
+    <div class="flip-card-front">
+      <img src="noah.jpg" alt="Star Icon" />
+      <h2>🏅 Superstar: <span id="childName">Noah Idrees</span></h2>
+      <p>Click to flip!</p>
+    </div>
+
+    <!-- Back of the card -->
+    <div class="flip-card-back">
+  <h3 style="margin-bottom: 10px; font-size: 20px; color: #d17a22;">🎉 Physical Superstar Moment 🎉</h3>
+  
+  <div style="background-color: #fff8dc; padding: 20px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <a href="https://www.youtube.com/watch?v=UDMV01nSkP4" target="_blank" style="text-decoration: none;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px; background-color: #ffcc4d; color: #000; padding: 14px 18px; border-radius: 12px; font-size: 18px; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+        📹 Watch Noah's Bowling Video
+      </div>
+    </a>
+
+    <p style="margin-top: 15px; font-size: 16px; color: #444;">
+      <strong>Teacher's Note:</strong><br>
+      Noah showed great balance and strength in the magnetic bowling game. Well done, champion!
+    </p>
+  </div>
+</div>
+      <p><strong>Teacher's Note:</strong> Noah showed great balance and strength in the magnetic bowling game. Well done, champion!</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
